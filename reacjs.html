@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACTJS</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script> 
+</head>
+<body>
+    <script>
+        //DOM 
+        // <h1 id="heading">Hello guys !</h1>
+        // const h1 = document.createElement('h1');
+        // // const h2 = document.createElement('h2');
+        
+        // h1.innerText ='HELLO GUYS !';
+        // h1.classList = 'heading';
+        // h1.id = 'idheading';
+        // h1.title = ' titleheading';
+        // // console.log(h1);
+        // // GẮN THỂ VÀO ELMENT Ở BODY
+        // document.body.appendChild(h1); 
+        //REACT
+        const element1 = React.createElement('h1',{
+            title : 'Hello',
+            classList: 'heading',
+        }, "VNTALKING: Hello React" )
+
+        const element2 = React.createElement("h2", null, "VNTALKING: Hello React");
+
+        console.log(element1);
+        console.log(element2);
+
+        //DOM VỚI LI VÀ UL
+        const lidom1 = document.createElement('li');
+        lidom1.innerText = 'JS'
+        lidom1.id = 'li-1'
+        lidom1.style = 'color: green; font-size: 20px'
+        
+        const lidom2 = document.createElement('li')
+        lidom2.innerText  = 'PHP';
+        const uldom = document.createElement('ul');
+        uldom.id = 'ul-id',
+        uldom.style = 'color:red; font-size: 30px ' ;
+
+        uldom.appendChild(lidom1);
+        uldom.appendChild(lidom2);
+
+        document.body.appendChild(uldom)
+      // REACT VỚI UL VÀ LI 
+
+        const ulReact = React.createElement(
+            'ul',
+             {
+                id : 'ul-id',
+                style:'color:red ; font-size:30px'
+             },
+             React.createElement('li',
+             {
+                id:'li-1',
+                style:'color:green; font-size:20px'
+             },'C'),
+             React.createElement('li',null,'C++'),
+        )
+        console.log(ulReact);
+    </script>
+</body>
+</html>

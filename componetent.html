@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componemt</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script> 
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+         
+
+       function Contentt(props) {
+        console.log(props);
+         return( 
+            <div className='wrap'>
+                <label htmlFor='email' >Email</label>
+                <input id='email' />
+                <h1 className='content'>{props.title}</h1>
+                <h2 className='end'>{props.titleend}</h2>
+                <img src={props.image} alt="Hello" />
+            </div>      
+         )
+       }
+      
+       function App  (){
+            // console.log(<Contentt title= "quan"/>);
+           return(
+               <div className="wreapper">
+                   <Contentt
+                       titleend="1 end"
+                       title=" 1 title-content"
+                       image=" https://vcdn1-dulich.vnecdn.net/2022/05/27/du-lich-Viet-Nam-3-1653637304.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=JTkFADdHoPj9uPujAqAv0w"              
+                   />  
+                   <Contentt
+                       titleend=" 2 end"
+                       title=" 2 title-content"
+                       image=" https://vcdn1-dulich.vnecdn.net/2022/05/27/du-lich-Viet-Nam-3-1653637304.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=JTkFADdHoPj9uPujAqAv0w"              
+                   />  
+                   <Contentt
+                       titleend="3 end"
+                       title="3 title-content"
+                       image=" https://vcdn1-dulich.vnecdn.net/2022/05/27/du-lich-Viet-Nam-3-1653637304.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=JTkFADdHoPj9uPujAqAv0w"              
+                   />    
+                 
+               </div>
+           )
+       }
+        ReactDOM.render(<App/>, document.getElementById('app'))
+    
+    </script>
+</body>
+</html>

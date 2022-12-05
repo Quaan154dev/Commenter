@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUAN</title>
+    <link rel="stylesheet" href="./bt.js">
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script> 
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<body>
+   <div id="root"></div>
+   <script type="text/babel">
+      // const divElement = React.createElement(
+      //    'div',
+      //    {
+      //     className: 'post-item',
+      //    } ,
+      //    Rea ct.createElement
+      //    ( 'h2', { title:'Học lập trình F8'},'học ReactJS'),
+      //    React.createElement
+      //    ( 'p', null,'học lập trinh năng cao', )
+      // )
+      // //  console.log(divElement);
+      // //  const root1 = document.getElementById('root')
+      // //  REACT@17
+      // // const element = React.createElement;
+      // // console.log(element);
+      // // ReactDOM.render(divElement, root);
+
+      // //Reac@18
+      // const root = ReactDOM.createRoot(root1);
+      // root.render(divElement) ;
+
+
+      // const courseras = [
+      //    {
+      //       name: 'HTML',
+      //    },
+      //    {
+      //       name: 'CSS',
+      //    },
+      //    {
+      //       name: 'JS',
+      //    },
+      //    {
+      //       name: 'REACT',
+      //    },
+      // ]
+   //      const htmls =(
+   //      <ul>
+   //          {courseras.map((coursera,index)=>
+   //            <li key={index}>{coursera.name}</li>    
+   //          )}
+   //       </ul>
+   //  )
+    
+    
+    
+   //  const jsx = React.createElement(
+   //     React.Fragment,
+   //     null,
+   //     React.createElement(' h1',null, 'heading 1' ), 
+   //     React.createElement('h2',null, 'heading 2' ),   
+   //     React.createElement('h3',null, 'heading 3' ),              
+   //     ) 
+
+    function App (){
+     return(
+        <div>
+           <button
+            onClick = {(e) => console.log(e.target.value)} 
+         
+            >Click me!!!</button>
+
+           <button
+             onClick = {
+                           function (){
+                              console.log(Math.random())
+                           }
+                       }
+           >Click me 2</button>
+        </div>
+     )
+    }
+       
+       ReactDOM.render(<App/>, document.getElementById('root'))
+   </script>
+    
+</body>
+</html>

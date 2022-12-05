@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const post_api = [
+            {
+                id :1,
+                image: "",
+                title: "Nodejs",
+                description: "Backend Nodejs"
+            },
+            {
+                id :2,
+                image: "",
+                title: "ReactJS",
+                description: "Frontend with ReactJS"
+            },
+            {
+                id :3,
+                image: "",
+                title: "Java Spring",
+                description: "Backend Java"
+            },
+        ];
+
+        function PostItem(props) {
+            console.log(props);
+            return (
+                <div className="post-item">
+                    <img src={props.image} alt="img" />
+                    <h2>{props.title}</h2>
+                    <p>{props.description}</p>
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div className="post-list">
+                    {
+                        post_api.map((post) => {
+                            return (
+                                <PostItem
+                                    key={post.id}
+                                    image={post.image}
+                                    title={post.title}
+                                    description={post.description}
+                                />
+                            )
+                        })
+                    }
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App />, document.querySelector('#root'))
+
+    </script>
+
+</body>
+
+</html>
